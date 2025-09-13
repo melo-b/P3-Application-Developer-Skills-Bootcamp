@@ -45,24 +45,26 @@ class TournamentManager:
         description = data.get("description", "")
         time_control = data.get("time_control", "rapid")
 
-        tournament = Tournament(
-            name=name,
-            location=location,
-            start_date=start_date,
-            end_date=end_date,
-            description=description,
-            time_control=time_control,
-            number_of_rounds=number_of_rounds,
-            current_round=current_round,
-            completed=completed,
-        )
+         tournament = Tournament(
+        name=name,
+        location=location,
+        start_date=start_date,
+        end_date=end_date,
+        description=description,
+        time_control=time_control,
+        number_of_rounds=number_of_rounds,
+        current_round=current_round,
+        completed=completed,
+    )
 
         # Players (for now, store raw IDs if sample data provides chess IDs)
-        # Future: map IDs to Player objects via clubs if needed
         tournament.players = data.get("players", [])
 
         # Rounds/matches: keep raw for now; future work can turn into objects
         tournament.rounds = data.get("rounds", [])
+    
+        # Load player points if available
+        tournament.player_points = data.get("player_points", {})
 
         return tournament
 
