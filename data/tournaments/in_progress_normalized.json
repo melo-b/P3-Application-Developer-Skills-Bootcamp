@@ -1,0 +1,95 @@
+{
+    "name": "Cornville Summer Chess",
+    "location": "Cornville Town Hall",
+    "start_date": "21-06-2022",
+    "end_date": "21-07-2022",
+    "description": "Summer tournament series",
+    "time_control": "blitz",
+    "number_of_rounds": 4,
+    "current_round": 2,
+    "completed": false,
+    "players": [
+        "LU33889",
+        "YJ29085", 
+        "PB43166",
+        "XW31336",
+        "OS93227",
+        "OU52460",
+        "AV07547",
+        "OH36083"
+    ],
+    "player_points": {
+        "LU33889": 0.5,
+        "YJ29085": 1.5,
+        "PB43166": 1.5,
+        "XW31336": 0.0,
+        "OS93227": 0.5,
+        "OU52460": 2.0,
+        "AV07547": 1.0,
+        "OH36083": 0.5
+    },
+    "rounds": [
+        {
+            "name": "Round 1",
+            "start_datetime": "21-06-2022 10:00",
+            "end_datetime": "21-06-2022 12:00",
+            "matches": [
+                {
+                    "player1": "LU33889",
+                    "player2": "YJ29085",
+                    "score1": 0,
+                    "score2": 1
+                },
+                {
+                    "player1": "PB43166",
+                    "player2": "XW31336", 
+                    "score1": 1,
+                    "score2": 0
+                },
+                {
+                    "player1": "OS93227",
+                    "player2": "OU52460",
+                    "score1": 0,
+                    "score2": 1
+                },
+                {
+                    "player1": "AV07547",
+                    "player2": "OH36083",
+                    "score1": 0.5,
+                    "score2": 0.5
+                }
+            ]
+        },
+        {
+            "name": "Round 2",
+            "start_datetime": "21-06-2022 14:00", 
+            "end_datetime": "21-06-2022 16:00",
+            "matches": [
+                {
+                    "player1": "YJ29085",
+                    "player2": "OU52460",
+                    "score1": 0.5,
+                    "score2": 1
+                },
+                {
+                    "player1": "PB43166",
+                    "player2": "AV07547",
+                    "score1": 0.5,
+                    "score2": 0.5
+                },
+                {
+                    "player1": "OH36083", 
+                    "player2": "XW31336",
+                    "score1": 0,
+                    "score2": 0
+                },
+                {
+                    "player1": "LU33889",
+                    "player2": "OS93227",
+                    "score1": 0.5,
+                    "score2": 0.5
+                }
+            ]
+        }
+    ]
+}

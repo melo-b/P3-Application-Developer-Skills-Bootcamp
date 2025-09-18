@@ -1,0 +1,158 @@
+{
+    "name": "Chichigneux Christmas Chess Tournament",
+    "location": "Chichigneux Community Hall",
+    "start_date": "21-12-2022",
+    "end_date": "23-12-2022",
+    "description": "Annual Christmas tournament",
+    "time_control": "rapid",
+    "number_of_rounds": 4,
+    "current_round": 4,
+    "completed": true,
+    "players": [
+        "RY03677",
+        "DP10300", 
+        "PB43166",
+        "YQ88272",
+        "RI14529",
+        "AV07547",
+        "OU52460",
+        "CF24301"
+    ],
+    "player_points": {
+        "RY03677": 2.0,
+        "DP10300": 1.5,
+        "PB43166": 3.0,
+        "YQ88272": 2.5,
+        "RI14529": 2.0,
+        "AV07547": 1.5,
+        "OU52460": 1.5,
+        "CF24301": 1.0
+    },
+    "rounds": [
+        {
+            "name": "Round 1",
+            "start_datetime": "21-12-2022 09:00",
+            "end_datetime": "21-12-2022 11:00",
+            "matches": [
+                {
+                    "player1": "RY03677",
+                    "player2": "DP10300",
+                    "score1": 1,
+                    "score2": 0
+                },
+                {
+                    "player1": "PB43166", 
+                    "player2": "YQ88272",
+                    "score1": 1,
+                    "score2": 0
+                },
+                {
+                    "player1": "RI14529",
+                    "player2": "AV07547", 
+                    "score1": 0.5,
+                    "score2": 0.5
+                },
+                {
+                    "player1": "OU52460",
+                    "player2": "CF24301",
+                    "score1": 0.5,
+                    "score2": 0.5
+                }
+            ]
+        },
+        {
+            "name": "Round 2", 
+            "start_datetime": "21-12-2022 14:00",
+            "end_datetime": "21-12-2022 16:00",
+            "matches": [
+                {
+                    "player1": "RY03677",
+                    "player2": "PB43166",
+                    "score1": 0,
+                    "score2": 1
+                },
+                {
+                    "player1": "RI14529",
+                    "player2": "OU52460",
+                    "score1": 1,
+                    "score2": 0
+                },
+                {
+                    "player1": "AV07547",
+                    "player2": "CF24301",
+                    "score1": 0.5,
+                    "score2": 0.5
+                },
+                {
+                    "player1": "DP10300",
+                    "player2": "YQ88272",
+                    "score1": 0,
+                    "score2": 1
+                }
+            ]
+        },
+        {
+            "name": "Round 3",
+            "start_datetime": "22-12-2022 09:00", 
+            "end_datetime": "22-12-2022 11:00",
+            "matches": [
+                {
+                    "player1": "PB43166",
+                    "player2": "RI14529",
+                    "score1": 1,
+                    "score2": 0
+                },
+                {
+                    "player1": "YQ88272",
+                    "player2": "RY03677",
+                    "score1": 1,
+                    "score2": 0
+                },
+                {
+                    "player1": "AV07547",
+                    "player2": "OU52460",
+                    "score1": 0.5,
+                    "score2": 0.5
+                },
+                {
+                    "player1": "DP10300",
+                    "player2": "CF24301",
+                    "score1": 1,
+                    "score2": 0
+                }
+            ]
+        },
+        {
+            "name": "Round 4",
+            "start_datetime": "22-12-2022 14:00",
+            "end_datetime": "22-12-2022 16:00", 
+            "matches": [
+                {
+                    "player1": "PB43166",
+                    "player2": "YQ88272",
+                    "score1": 0,
+                    "score2": 0.5
+                },
+                {
+                    "player1": "RI14529",
+                    "player2": "RY03677",
+                    "score1": 0.5,
+                    "score2": 1
+                },
+                {
+                    "player1": "DP10300",
+                    "player2": "AV07547",
+                    "score1": 0.5,
+                    "score2": 0
+                },
+                {
+                    "player1": "OU52460",
+                    "player2": "CF24301",
+                    "score1": 0.5,
+                    "score2": 0.5
+                }
+            ]
+        }
+    ]
+}
+
