@@ -1,6 +1,7 @@
 from commands.base import BaseCommand
 from commands.context import Context
 from models.tournament import Tournament
+from models import ClubManager
 
 class CreateTournament(BaseCommand):
     def __init__(self):
@@ -37,4 +38,7 @@ class CreateTournament(BaseCommand):
             pass
 
         print(f"\n✅ Tournament '{name}' created successfully!\n")
-        return Context("main-menu")
+        
+        cm = ClubManager()
+        
+        return Context("main-menu", clubs=cm.clubs)
