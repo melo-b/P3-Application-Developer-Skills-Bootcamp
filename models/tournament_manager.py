@@ -14,17 +14,24 @@ class TournamentManager:
     
     def load_tournaments(self):
         """Load all tournaments from JSON files"""
+        # Clear existing tournaments to avoid duplicates
+        self.tournaments = []
+        
         if not os.path.exists(self.tournaments_dir):
             return
             
         for filename in os.listdir(self.tournaments_dir):
             if filename.endswith('.json'):
                 filepath = os.path.join(self.tournaments_dir, filename)
-                with open(filepath, 'r') as f:
-                    data = json.load(f)
-                    # Convert JSON data to Tournament objects
-                    tournament = self._json_to_tournament(data)
-                    self.tournaments.append(tournament)
+                try:
+                    with open(filepath, 'r') as f:
+                        data = json.load(f)
+                        # Convert JSON data to Tournament objects
+                        tournament = self._json_to_tournament(data)
+                        self.tournaments.append(tournament)
+                except (json.JSONDecodeError, FileNotFoundError) as e:
+                    print(f"Warning: Could not load tournament from {filename}: {e}")
+                    continue
 
     def _json_to_tournament(self, data):
         """Adapt on-disk JSON (supports existing sample schema) to a Tournament object"""
@@ -45,17 +52,17 @@ class TournamentManager:
         description = data.get("description", "")
         time_control = data.get("time_control", "rapid")
 
-         tournament = Tournament(
-        name=name,
-        location=location,
-        start_date=start_date,
-        end_date=end_date,
-        description=description,
-        time_control=time_control,
-        number_of_rounds=number_of_rounds,
-        current_round=current_round,
-        completed=completed,
-    )
+        tournament = Tournament(
+            name=name,
+            location=location,
+            start_date=start_date,
+            end_date=end_date,
+            description=description,
+            time_control=time_control,
+            number_of_rounds=number_of_rounds,
+            current_round=current_round,
+            completed=completed,
+        )
 
         # Players (for now, store raw IDs if sample data provides chess IDs)
         tournament.players = data.get("players", [])
@@ -90,3 +97,7 @@ class TournamentManager:
     def get_completed_tournaments(self):
         """Get completed tournaments"""
         return [t for t in self.tournaments if getattr(t, 'completed', False)]
+    
+    def get_all_tournaments(self):
+        """Get all tournaments"""
+        return self.tournaments
